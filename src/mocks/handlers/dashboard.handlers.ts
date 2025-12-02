@@ -4,6 +4,8 @@ export const dashboardHandlers = [
   http.get('/api/dashboard/stats', async () => {
     await delay(400)
 
+    return new HttpResponse(null, { status: 404 })
+
     return HttpResponse.json({
       totalPersons: 100,
       totalFamilies: 823,
